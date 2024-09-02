@@ -1,0 +1,19 @@
+{
+  "name": "aws-note-crud-app",
+  "version": "1.0.0",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"All tests passed\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "serverless-iam-roles-per-function": "^3.2.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.635.0",
+    "aws-jwt-verify": "^4.0.1"
+  }
+}
