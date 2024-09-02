@@ -7,7 +7,7 @@ phases:
       nodejs: 18
     commands:
       - echo installing serverless cli
-      - npm i -g serverless@2
+      - npm i -g serverless@3
       - echo installing dependencies
       - npm i
     
@@ -23,6 +23,7 @@ artifacts:
   files:
     - artifact/*
   name: ProjectArtifact
+  
 cache:
   paths:
     - 'node_modules/**/*'
