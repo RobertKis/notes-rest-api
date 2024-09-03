@@ -74,6 +74,7 @@ module.exports.updateNote = async (event, context, cb) => {
 module.exports.deleteNote = async (event, context, cb) => {
   AWS_NODEJS_CONNECTION_REUSE_ENABLED = 1;
   context.callbackWaitsForEmptyEventLoop = false;
+  
   let notesId = event.pathParameters.id
 
   try {
