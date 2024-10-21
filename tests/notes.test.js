@@ -15,7 +15,7 @@ describe('Given an authenticated user', () => {
 
     describe('When we invoke the POST /notes endpoint', () => {
         it('should create a new note', async () => {
-            body = {
+            const body = {
                 id: '1',
                 title: 'Test note title',
                 body: 'Test note body'
@@ -31,7 +31,7 @@ describe('Given an authenticated user', () => {
         it('should update the note', async () => {
             const noteId = "1";
 
-            body = {
+            const body = {
                 title: 'updated title',
                 body: 'udpated body'
             }
