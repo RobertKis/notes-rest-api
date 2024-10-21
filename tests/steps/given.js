@@ -21,6 +21,12 @@ exports.an_authenticated_user = async () => {
     }
     console.log('params')
     console.log(params)
-    let user = await cognito.adminInitiateAuth(params).promise();
-    return user;
+    try {
+        let user = await cognito.adminInitiateAuth(params).promise();
+        console.log('Authenticated user:', user); 
+        return user;
+    } catch (err) {
+        console.log('Error:', err);
+        return null;
+    }
 };
