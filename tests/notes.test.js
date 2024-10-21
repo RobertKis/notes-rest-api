@@ -9,7 +9,7 @@ describe('Given an authenticated user', () => {
     beforeAll(async () => {
         init();
         let user = await an_authenticated_user();
-        idToken = user.authenticationResult.idToken;
+        idToken = user.AuthenticationResult.IdToken;
         console.log(idToken);
     });
 
