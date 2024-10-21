@@ -32,11 +32,13 @@ generatePolicy = (principleId, effect, resource) => {
 }
 
 exports.handler = async (event, context, cb) => {
+    console.log('in the authorization handler')
     let token = event.authorizationToken;
     console.log(token);
     // validate the token
     try {
         const payload = await jwtVerifier.verify(token);
+        console.log('payload')
         console.log(JSON.stringify(payload));
         cb(null, generatePolicy('user', 'Allow', event.methodArn));
     } catch (error) {
