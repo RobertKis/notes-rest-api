@@ -6,7 +6,7 @@ var agent = require('superagent-promise')(require('superagent'), Promise);
 
 const makeHttpRequest = async (path, method, options) => {
     let root = process.env.TEST_ROOT;
-    let url = options.noteId ? `${root}/${path}/${options.nodeId}` : `${root}/${path}`;
+    let url = options.noteId ? `${root}/${path}/${options.noteId}` : `${root}/${path}`;
     let httpReq = agent(method, url);
     let body = _.get(options, "body");
     let idToken = _.get(options, "idToken");

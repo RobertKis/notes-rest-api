@@ -6,9 +6,9 @@ const jwtVerifier = CognitoJwtVerifier.create({
     clientId: '3chv8oi2nl8ikmfv1d7l4qk2n9' 
 });
 
-generatePolicy = (principleId, effect, resource) => {
+generatePolicy = (principalId, effect, resource) => {
     const authResponse = {};
-    authResponse.principalId = principleId;
+    authResponse.principalId = principalId;
 
     if(effect && resource) {
         const policyDocument = {
