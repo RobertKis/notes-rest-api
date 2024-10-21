@@ -23,6 +23,23 @@ cognitoUserPoolClient:
   Properties:
     ClientName: notes-app-client
     UserPoolId: !Ref cognitoUserPool
+    AllowedOAuthFlowsUserPoolClient: true
+    SupportedIdentityProviders:
+      - COGNITO
+    AllowedOAuthFlows:
+      - implicit
+    AllowedOAuthScopes:
+      - phone
+      - email
+      - openid
+      - profile
+    CallbackURLs:
+      - http://localhost:3000
+    ExplicitAuthFlows:
+      - ALLOW_ADMIN_USER_PASSWORD_AUTH
+      - ALLOW_REFRESH_TOKEN_AUTH
+      - ALLOW_CUSTOM_AUTH
+      - ALLOW_USER_SRP_AUTH
 
 # Notes User Pool Domain
 cognitoUserPoolDomain:
