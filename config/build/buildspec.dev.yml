@@ -10,8 +10,8 @@ phases:
       - npm i -g serverless@3
       - echo installing dependencies
       - npm i
-      
-   pre_build:
+
+  pre_build:
     commands:
       - echo Deploying resources
       - serverless deploy --stage dev --region eu-north-1
