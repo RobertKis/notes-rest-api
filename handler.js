@@ -16,8 +16,11 @@ const send = (statusCode, message) => {
 }
 
 module.exports.createNote = async (event, context, cb) => {
+  console.log('in create note')
   context.callbackWaitsForEmptyEventLoop = false;
   AWS_NODEJS_CONNECTION_REUSE_ENABLED = 1;
+  console.log('event.body)');
+  console.log(event.body)
   let data = JSON.parse(event.body);
 
   try {

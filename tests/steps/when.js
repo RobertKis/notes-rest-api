@@ -15,7 +15,8 @@ const makeHttpRequest = async (path, method, options) => {
     try {
         // set authorization header
         httpReq.set('Authorization', idToken);
-
+        console.log('body')
+        console.log(body)
         if(body) {
             httpReq.send(body);
         }
