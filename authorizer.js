@@ -1,6 +1,6 @@
 const { CognitoJwtVerifier } = require('aws-jwt-verify');
 
-const jwtVerifier = new CognitoJwtVerifier.Create({
+const jwtVerifier = CognitoJwtVerifier.create({
     userPoolId: 'eu-north-1_f2JWrLtGd',
     tokenUse: 'id',
     clientId: '3chv8oi2nl8ikmfv1d7l4qk2n9' 
