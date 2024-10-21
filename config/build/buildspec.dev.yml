@@ -11,10 +11,10 @@ phases:
       - echo installing dependencies
       - npm i
 
-  pre_build:
-    commands:
-      - echo Deploying resources
-      - serverless deploy --stage dev --region eu-north-1
+  # pre_build:
+  #   commands:
+  #     - echo Deploying resources
+  #     - serverless deploy --stage dev --region eu-north-1
 
   build:
     on-failure: ABORT
